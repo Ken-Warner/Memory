@@ -5,8 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Memory"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+        Title="Memory"
+        Height="555"
+        Width="400"
+        ResizeMode="CanMinimize"
+        Icon="Resources/memoryicon.jpg"
+        WindowStartupLocation="CenterScreen"
+        Closing="Window_Closing">
+    <StackPanel>
+        <Image Source="Resources/memoryicon.jpg" />
+        <Button Name="startButton"
+                Content="Start"
+                Margin="5 5 5 0"
+                BorderThickness="3"
+                BorderBrush="Blue"
+                Click="" />
+        <Button Name="settingsButton"
+                Content="Settings"
+                Margin="5 5 5 0"
+                BorderThickness="3"
+                BorderBrush="Blue"
+                Click="" />
+        <Button Name="exitButton"
+                Content="Exit"
+                Margin="5 5 5 0"
+                BorderThickness="3"
+                BorderBrush="Blue"
+                Click="" />
+        <TextBlock Text="In settings you can change the difficulty or images used. You can also view the high scores."
+                   TextWrapping="Wrap"
+                   Margin="5 5 5 0" />
+    </StackPanel>
 </Window>
