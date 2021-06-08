@@ -54,8 +54,6 @@ namespace Memory
         /// Serializes the UserPreferences class that will house the settings and high scores before closing the window and
         /// ending the game
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             //todo Serialize User Preferences class to save play mode/resources/difficulty/high scores/etc

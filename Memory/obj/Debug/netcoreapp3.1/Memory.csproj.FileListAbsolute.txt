@@ -4,7 +4,6 @@ D:\ProgrammingProjects\Memory\Memory\bin\Debug\netcoreapp3.1\Memory.runtimeconfi
 D:\ProgrammingProjects\Memory\Memory\bin\Debug\netcoreapp3.1\Memory.runtimeconfig.dev.json
 D:\ProgrammingProjects\Memory\Memory\bin\Debug\netcoreapp3.1\Memory.dll
 D:\ProgrammingProjects\Memory\Memory\bin\Debug\netcoreapp3.1\Memory.pdb
-D:\ProgrammingProjects\Memory\Memory\obj\Debug\netcoreapp3.1\Memory.csprojAssemblyReference.cache
 D:\ProgrammingProjects\Memory\Memory\obj\Debug\netcoreapp3.1\MainWindow.g.cs
 D:\ProgrammingProjects\Memory\Memory\obj\Debug\netcoreapp3.1\App.g.cs
 D:\ProgrammingProjects\Memory\Memory\obj\Debug\netcoreapp3.1\Memory_MarkupCompile.cache

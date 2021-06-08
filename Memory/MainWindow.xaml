@@ -9,9 +9,9 @@
         Height="555"
         Width="400"
         ResizeMode="CanMinimize"
-        Icon="Resources/memoryicon.jpg"
         WindowStartupLocation="CenterScreen"
-        Closing="Window_Closing">
+        Closing="Window_Closing"
+        Icon="Resources/memoryicon.jpg">
     <StackPanel>
         <Image Source="Resources/memoryicon.jpg" />
         <Button Name="startButton"
@@ -19,19 +19,19 @@
                 Margin="5 5 5 0"
                 BorderThickness="3"
                 BorderBrush="Blue"
-                Click="" />
+                Click="StartButton_Click" />
         <Button Name="settingsButton"
                 Content="Settings"
                 Margin="5 5 5 0"
                 BorderThickness="3"
                 BorderBrush="Blue"
-                Click="" />
+                Click="SettingsButton_Click" />
         <Button Name="exitButton"
                 Content="Exit"
                 Margin="5 5 5 0"
                 BorderThickness="3"
                 BorderBrush="Blue"
-                Click="" />
+                Click="ExitButton_Click" />
         <TextBlock Text="In settings you can change the difficulty or images used. You can also view the high scores."
                    TextWrapping="Wrap"
                    Margin="5 5 5 0" />
