@@ -16,3 +16,10 @@ D:\ProgrammingProjects\Memory\Memory\obj\Debug\netcoreapp3.1\Memory.csproj.CoreC
 D:\ProgrammingProjects\Memory\Memory\obj\Debug\netcoreapp3.1\Memory.dll
 D:\ProgrammingProjects\Memory\Memory\obj\Debug\netcoreapp3.1\Memory.pdb
 D:\ProgrammingProjects\Memory\Memory\obj\Debug\netcoreapp3.1\Memory.genruntimeconfig.cache
+D:\ProgrammingProjects\Memory\Memory\obj\Debug\netcoreapp3.1\Memory.csprojAssemblyReference.cache
+D:\ProgrammingProjects\Memory\Memory\obj\Debug\netcoreapp3.1\SettingsWindow.g.cs
+D:\ProgrammingProjects\Memory\Memory\obj\Debug\netcoreapp3.1\SettingsWindow.baml
+D:\ProgrammingProjects\Memory\Memory\obj\Debug\netcoreapp3.1\GameWindow.g.cs
+D:\ProgrammingProjects\Memory\Memory\obj\Debug\netcoreapp3.1\GetInitialsWindow.g.cs
+D:\ProgrammingProjects\Memory\Memory\obj\Debug\netcoreapp3.1\GameWindow.baml
+D:\ProgrammingProjects\Memory\Memory\obj\Debug\netcoreapp3.1\GetInitialsWindow.baml

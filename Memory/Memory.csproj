@@ -7,11 +7,73 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\amazon.jpg" />
+    <None Remove="Resources\android.png" />
+    <None Remove="Resources\apple.jpg" />
+    <None Remove="Resources\austrailia.png" />
+    <None Remove="Resources\brazil.png" />
+    <None Remove="Resources\canada.png" />
+    <None Remove="Resources\cardreverse.png" />
+    <None Remove="Resources\china.png" />
+    <None Remove="Resources\facebook.png" />
+    <None Remove="Resources\france.png" />
+    <None Remove="Resources\germany.png" />
+    <None Remove="Resources\google.jpg" />
+    <None Remove="Resources\india.png" />
+    <None Remove="Resources\japan.png" />
+    <None Remove="Resources\lg.png" />
     <None Remove="Resources\memoryicon.jpg" />
+    <None Remove="Resources\mexico.png" />
+    <None Remove="Resources\microsoft.jpg" />
+    <None Remove="Resources\norway.png" />
+    <None Remove="Resources\oracle.png" />
+    <None Remove="Resources\russia.png" />
+    <None Remove="Resources\samsung.png" />
+    <None Remove="Resources\snapchat.jpg" />
+    <None Remove="Resources\sony.jpg" />
+    <None Remove="Resources\southafrica.png" />
+    <None Remove="Resources\spain.png" />
+    <None Remove="Resources\sprint.png" />
+    <None Remove="Resources\unitedkingdom.png" />
+    <None Remove="Resources\unitedstates.png" />
+    <None Remove="Resources\valve.jpg" />
+    <None Remove="Resources\verison.png" />
+    <None Remove="Resources\xbox.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Resources\amazon.jpg" />
+    <Resource Include="Resources\android.png" />
+    <Resource Include="Resources\apple.jpg" />
+    <Resource Include="Resources\austrailia.png" />
+    <Resource Include="Resources\brazil.png" />
+    <Resource Include="Resources\canada.png" />
+    <Resource Include="Resources\cardreverse.png" />
+    <Resource Include="Resources\china.png" />
+    <Resource Include="Resources\facebook.png" />
+    <Resource Include="Resources\france.png" />
+    <Resource Include="Resources\germany.png" />
+    <Resource Include="Resources\google.jpg" />
+    <Resource Include="Resources\india.png" />
+    <Resource Include="Resources\japan.png" />
+    <Resource Include="Resources\lg.png" />
     <Resource Include="Resources\memoryicon.jpg" />
+    <Resource Include="Resources\mexico.png" />
+    <Resource Include="Resources\microsoft.jpg" />
+    <Resource Include="Resources\norway.png" />
+    <Resource Include="Resources\oracle.png" />
+    <Resource Include="Resources\russia.png" />
+    <Resource Include="Resources\samsung.png" />
+    <Resource Include="Resources\snapchat.jpg" />
+    <Resource Include="Resources\sony.jpg" />
+    <Resource Include="Resources\southafrica.png" />
+    <Resource Include="Resources\spain.png" />
+    <Resource Include="Resources\sprint.png" />
+    <Resource Include="Resources\unitedkingdom.png" />
+    <Resource Include="Resources\unitedstates.png" />
+    <Resource Include="Resources\valve.jpg" />
+    <Resource Include="Resources\verison.png" />
+    <Resource Include="Resources\xbox.png" />
   </ItemGroup>
 
 </Project>

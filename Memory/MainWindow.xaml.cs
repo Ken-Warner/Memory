@@ -23,6 +23,9 @@ namespace Memory
         public MainWindow()
         {
             InitializeComponent();
+
+            //load user settings
+            UserPreferences.DeserializeUserPreferences();
         }
 
         /// <summary>
@@ -30,7 +33,50 @@ namespace Memory
         /// </summary>
         public void StartButton_Click(object sender, RoutedEventArgs e)
         {
-            //todo Implement
+            //instantiate and initialize the game window
+            GameWindow gWindow = new GameWindow()
+            {
+                difficulty = UserPreferences.difficulty,
+                cardResources = UserPreferences.cardResources
+            };
+
+            gWindow.InitializeGameComponents();
+
+
+            //hide this window and shoe the game window
+            Hide();
+            bool? result = gWindow.ShowDialog();
+            Show();
+
+            //once the game is done, if it closed appropriately, check for a high score
+            if (result.HasValue)
+            {
+                if (result.Value)
+                {
+                    bool isHighScore = UserPreferences.CheckHighScores(UserPreferences.difficulty, gWindow.NumberOfRounds);
+                    if (isHighScore)
+                    {
+                        //get the initials of the player if we have a high score
+                        GetInitialsWindow initialsWindow = new GetInitialsWindow();
+                        initialsWindow.Message = "Congratulations, " + gWindow.NumberOfRounds + Environment.NewLine + " is a new high score!";
+                        bool? initialsResult = initialsWindow.ShowDialog();
+
+                        string initials;
+                        if (initialsResult.HasValue && initialsResult.Value)
+                            initials = initialsWindow.Initials;
+                        else
+                            initials = "AAA";
+
+                        //save the high score
+                        UserPreferences.AddHighScore(UserPreferences.difficulty, gWindow.NumberOfRounds, initials);
+                    } else
+                    {
+                        //no high score
+                        MessageBox.Show("You completed the game in " + gWindow.NumberOfRounds + " rounds!", "Congratulations!");
+                    }
+                }
+            }
+            //if no value then the game window exited prematurely (x button)
         }
 
         /// <summary>
@@ -38,7 +84,27 @@ namespace Memory
         /// </summary>
         public void SettingsButton_Click(object sender, RoutedEventArgs e)
         {
-            //todo Implement
+            //create the window
+            SettingsWindow settingsWindow = new SettingsWindow()
+            {
+                SelectedDifficulty = UserPreferences.difficulty,
+                SelectedResources = UserPreferences.resources
+            };
+
+            //hide this window and show the settings window, reshow when done
+            Hide();
+            bool? result = settingsWindow.ShowDialog();
+            Show();
+
+            //if window was closed legitimately and it was the save button that closed it
+            if (result.HasValue && result.Value)
+            {
+                //update UserPreferences
+                UserPreferences.difficulty = settingsWindow.SelectedDifficulty;
+                UserPreferences.ChangeResources(settingsWindow.SelectedResources);
+            }
+
+            e.Handled = true; //mark event as handled
         }
 
         /// <summary>
@@ -46,8 +112,8 @@ namespace Memory
         /// </summary>
         public void ExitButton_Click(object sender, RoutedEventArgs e)
         {
-            Close();
             e.Handled = true;
+            Close();
         }
 
         /// <summary>
@@ -56,7 +122,8 @@ namespace Memory
         /// </summary>
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            //todo Serialize User Preferences class to save play mode/resources/difficulty/high scores/etc
+            //save settings
+            UserPreferences.SerializeUserPreferences();
         }
     }
 }

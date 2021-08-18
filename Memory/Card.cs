@@ -24,8 +24,7 @@ namespace Memory
 
         public Card(BitmapImage frontSource, int width, int height, int id) : base()
         {
-            //todo Set the backSource property to a bitmap of the back of the card
-            //backSource = new BitmapImage(new Uri("", UriKind.Relative));
+            backSource = new BitmapImage(new Uri("Resources/cardreverse.png", UriKind.Relative));
             this.frontSource = frontSource;
 
             //set the source for the card to start face down
@@ -35,6 +34,9 @@ namespace Memory
             Stretch = Stretch.Fill;
             Width = width;
             Height = height;
+
+            //set the id that is unique to every pair of cards
+            ID = id;
         }
 
         /// <summary>

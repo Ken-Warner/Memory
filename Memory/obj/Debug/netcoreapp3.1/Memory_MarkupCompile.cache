@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 D:\ProgrammingProjects\Memory\Memory\App.xaml
-11151548125
+41495507584
 
-3-917710711
+9105299615
 1921654412462
-MainWindow.xaml;
+GameWindow.xaml;GetInitialsWindow.xaml;MainWindow.xaml;SettingsWindow.xaml;
 
 False
 

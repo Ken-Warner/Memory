@@ -1,0 +1,176 @@
+﻿<Window x:Class="Memory.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Memory"
+        mc:Ignorable="d"
+        Title="Settings"
+        Height="405"
+        Width="400"
+        ResizeMode="CanMinimize"
+        Icon="Resources/memoryicon.jpg"
+        WindowStartupLocation="CenterScreen">
+    <StackPanel>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition Width="290" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <TextBlock Text="Difficulty"
+                       Grid.Column="1"
+                       Grid.Row="1"
+                       FontSize="16" />
+            <TextBlock Text="Easy"
+				   Margin="20 5 0 0"
+				   Grid.Column="1"
+				   Grid.Row="2"
+				   FontSize="16" />
+            <RadioButton Name="easyRadioButton"
+					 Grid.Column="2"
+					 Grid.Row="2"
+					 HorizontalAlignment="Center" 
+					 VerticalAlignment="Center"
+					 GroupName="difficultySelection" IsChecked="True" />
+            <TextBlock Text="Medium"
+				   Margin="20 5 0 0"
+				   Grid.Column="1"
+				   Grid.Row="3"
+				   FontSize="16" />
+            <RadioButton Name="mediumRadioButton"
+					 Grid.Column="2"
+					 Grid.Row="3"
+					 HorizontalAlignment="Center" 
+					 VerticalAlignment="Center"
+					 GroupName="difficultySelection" />
+            <TextBlock Text="Hard"
+				   Margin="20 5 0 0"
+				   Grid.Column="1"
+				   Grid.Row="4"
+				   FontSize="16" />
+            <RadioButton Name="hardRadioButton"
+					Grid.Column="2"
+					Grid.Row="4"
+					HorizontalAlignment="Center" 
+					VerticalAlignment="Center"
+					GroupName="difficultySelection" />
+        </Grid>
+        <Rectangle Height="3" Fill="Black" Margin="0 5 0 5" />
+        <Grid Name="highScoresGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="10" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+            <TextBlock Text="High Scores"
+					   Grid.Row="0"
+					   Grid.Column="1"
+					   Grid.ColumnSpan="4"
+					   FontSize="18"
+					   HorizontalAlignment="Center" />
+            <TextBlock Text="Easy"
+					   Grid.Column="1"
+					   Grid.Row="1"
+					   FontSize="16"
+					   HorizontalAlignment="Center"
+					   Margin="0 3 0 3" />
+            <TextBlock Text="Medium"
+					   Grid.Column="2"
+					   Grid.Row="1"
+					   Margin="0 3 0 3"
+					   HorizontalAlignment="Center"
+					   FontSize="16" />
+            <TextBlock Text="Hard"
+					   Grid.Column="3"
+					   Grid.Row="1"
+					   Margin="0 3 0 3"
+					   HorizontalAlignment="Center"
+					   FontSize="16" />
+
+        </Grid>
+        <Rectangle Height="3" Fill="Black" Margin="0 5 0 5"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition Width="290" />
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+            <TextBlock Text="Cards"
+					   Grid.Column="1"
+					   Grid.Row="1"
+					   Margin="0 3 0 3"
+					   HorizontalAlignment="Left"
+					   FontSize="16" />
+            <TextBlock Text="Flags"
+					   Grid.Column="1"
+					   Grid.Row="2"
+					   Margin="20 3 0 3"
+					   HorizontalAlignment="Left"
+					   FontSize="16" />
+            <RadioButton x:Name="flagRadioButton"
+					Grid.Column="2"
+					Grid.Row="2"
+					IsChecked="True"
+					HorizontalAlignment="Center" 
+					VerticalAlignment="Center"
+					GroupName="cardSelection" />
+            <TextBlock Text="Companies"
+					   Grid.Column="1"
+					   Grid.Row="3"
+					   Margin="20 3 0 3"
+					   HorizontalAlignment="Left"
+					   FontSize="16" />
+            <RadioButton x:Name="companyRadioButton"
+					Grid.Column="2"
+					Grid.Row="3"
+					HorizontalAlignment="Center" 
+					VerticalAlignment="Center"
+					GroupName="cardSelection" />
+        </Grid>
+        <Rectangle Height="3" Fill="Black" Margin="0 5 0 5"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+
+            <Button Name="Save"
+					Content="Save"
+					Grid.Column="0"
+					Grid.Row="0"
+					Click="Save_Click" />
+            <Button Name="Cancel"
+					Content="Cancel"
+					Grid.Column="1"
+					Grid.Row="0"
+					Click="Cancel_Click" />
+        </Grid>
+    </StackPanel>
+</Window>
